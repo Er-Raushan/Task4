@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All-in-One Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Task 4 ✨</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="navigate('portfolio')">Portfolio</a></li>
+        <li><a href="#" onclick="navigate('todo')">To-Do</a></li>
+        <li><a href="#" onclick="navigate('products')">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="portfolio" class="container active">
+      <h2>👩‍💻 About Me</h2>
+      <div class="card">
+        <p>Hello! I'm <strong>Raushan</strong>, a passionate web developer who loves creating interactive, responsive, and visually stunning websites. I specialize in HTML, CSS, and JavaScript—and I love combining creativity with code!</p>
+      </div>
+
+      <h3>🚀 Projects</h3>
+      <div class="card">
+        <ul>
+          <li>📝 Interactive To-Do App with Local Storage</li>
+          <li>🛍️ Filterable Product Listing with Sorting</li>
+        </ul>
+      </div>
+
+      <h3>📬 Contact</h3>
+      <div class="card">
+        <p>Email: <a href="mailto:raushan@example.com">raushan@example.com</a></p>
+      </div>
+    </section>
+
+    <section id="todo" class="container">
+      <h2>✅ To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add a task...">
+      <button onclick="addTask()">Add Task</button>
+      <div id="taskList"></div>
+    </section>
+
+    <section id="products" class="container">
+      <h2>🛒 Product Listings</h2>
+      <div class="card">
+        <label>Filter by:
+          <select id="filter" onchange="renderProducts()">
+            <option value="all">All</option>
+            <option value="books">Books</option>
+            <option value="tech">Tech</option>
+            <option value="toys">toys</option>
+            <option value="clothing">clothing</option>
+          </select>
+        </label>
+        <label>Sort by:
+          <select id="sort" onchange="renderProducts()">
+            <option value="default">Default</option>
+            <option value="low">Price Low to High</option>
+            <option value="high">Price High to Low</option>
+          </select>
+        </label>
+      </div>
+      <div id="productList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Raushan All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
